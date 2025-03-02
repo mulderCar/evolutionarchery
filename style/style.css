@@ -1,0 +1,345 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    line-height: 1.6;
+    background-color: #121212; /* Dark background */
+    color: #dcdcdc; /* Light text */
+}
+
+/* Header Styling */
+header {
+    background-color: #004080; /* Deep blue */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #003366;
+}
+
+header .logo img {
+    height: 60px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #00bfff; /* Hover highlight */
+}
+
+/* Hero Section */
+.hero {
+    color: #dcdcdc;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: #b3d8ff;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #00bfff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #008ecc;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #121212;
+    color: #dcdcdc;
+}
+
+section h1 {
+    color: #b3d8ff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* Team & Gallery Grid */
+.team-grid, .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.team-member, .gallery-grid img {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover, .gallery-grid img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+}
+
+.team-member h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+/* Table Styling for Schedule */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: center;
+    color: #dcdcdc;
+}
+
+table th {
+    background-color: #004080;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #1c1c1c;
+}
+
+/* Contact Form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea, button {
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #00bfff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #008ecc;
+}
+
+/* FAQ Page Styling */
+.faq {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.faq h1 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.faq-item {
+    background-color: #1e1e1e;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+}
+
+.faq-item h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.faq-item a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.faq-item a:hover {
+    text-decoration: underline;
+}
+
+/* Meet Our Team - Coaches Section */
+.team {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.team h1 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.coaches-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.coach {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+}
+
+.coach:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+}
+
+.coach img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.coach h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.coach p {
+    color: #dcdcdc;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* About Page Styling */
+.about {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    color: #00bfff;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.about-item {
+    background-color: #1e1e1e;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 1200px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+}
+
+.about-item h3 {
+    color: #00bfff;
+    margin-bottom: 10px;
+}
+
+.about-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.about-item a {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-item a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #004080;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
