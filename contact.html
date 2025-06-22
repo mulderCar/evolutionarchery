@@ -25,23 +25,26 @@
         </nav>
     </header>
 
-    <!-- Contact Section -->
     <section class="contact">
         <div class="content">
             <h1>Contact Us</h1>
-            <p>Have questions or want to learn more about Evolution Archery? Reach out to us below!</p>
-            <form action="mailto:muldercarson@gmail.com" method="post" enctype="text/plain">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
+                <p>Have questions or want to learn more about Evolution Archery? Reach out to us below!</p>
+
+                    <form action="https://formspree.io/f/xrbkavwa" method="POST">
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+
+                        <!-- Honeypot (spam bot trap) -->
+                        <input type="text" name="_gotcha" style="display:none">
+
+                        <!-- Optional: Redirect after submission -->
+                        <!-- <input type="hidden" name="_redirect" value="https://evolutionarchery.org/thankyou.html"> -->
+
+                        <button type="submit">Send</button>
+                    </form>
         </div>
     </section>
 
