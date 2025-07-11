@@ -30,21 +30,48 @@
             <h1>Contact Us</h1>
                 <p>Have questions or want to learn more about Evolution Archery? Reach out to us below!</p>
 
-                    <form action="https://formspree.io/f/xrbkavwa" method="POST">
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                    <form id="contactForm" action="https://formspree.io/f/xrbkavwa" method="POST">
+                        <label>
+                            Your email:
+                            <input type="email" name="email" required>
+                        </label>
+                        <label>
+                            Your message:
+                            <textarea name="message" required></textarea>
+                        </label>
 
-                        <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
+                        <input type="hidden" id="state" name="State">
 
-                        <!-- Honeypot (spam bot trap) -->
-                        <input type="text" name="_gotcha" style="display:none">
-
-                        <!-- Optional: Redirect after submission -->
-                        <input type="hidden" name="_redirect" value="https://evolutionarchery.org/index.html">
+                        <label>
+                            <input type="checkbox" id="consentCheckbox" required>
+                            I consent to this site collecting my general location (state) for analytics purposes.
+                        </label>
 
                         <button type="submit">Send</button>
                     </form>
+
+                    <script>
+                        document.getElementById("contactForm").addEventListener("submit", function (e) {
+                            e.preventDefault(); // stop default submit
+
+                            const consentGiven = document.getElementById("consentCheckbox").checked;
+                            if (!consentGiven) {
+                            alert("Please accept location tracking to submit the form.");
+                            return;
+                            }
+
+                            fetch("https://ipapi.co/json/")
+                            .then(response => response.json())
+                            .then(data => {
+                                document.getElementById("state").value = `${data.region}, ${data.country_name}`;
+                                this.submit(); // now submit form with state field
+                            })
+                            .catch(error => {
+                                console.error("Geo lookup failed:", error);
+                                this.submit(); // fallback: submit without state
+                            });
+                        });
+                    </script>
         </div>
     </section>
 
