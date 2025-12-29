@@ -263,3 +263,39 @@ img { max-width: 100%; height: auto; }
   header nav ul { flex-wrap: wrap; justify-content: flex-end; }
   header .logo img { height: 52px; }
 }
+
+/* Info Section */
+.info-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #0f0f0f;
+}
+
+.info-card {
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 12px;
+    padding: 30px 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.info-card h2 {
+    color: #b3d8ff; /* matches archery/tech vibe */
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.all-ages {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #00aaff;
+}
